@@ -1,25 +1,57 @@
-# General IDE and OS files
+### Symfony Ignored Files ###
+
+# Environment and secret files
+/.env
+/.env.local
+/.env.*.local
+/.env.local.php
+/config/secrets/prod/prod.decrypt.private.php
+
+# Symfony-generated cache, logs, and session files
+/var/
+/var/cache/
+/var/log/
+/var/sessions/
+
+# Public assets and bundles
+/public/bundles/
+/public/assets/
+/assets/vendor/
+
+# Composer dependencies
+/vendor/
+
+# PHPUnit test result cache
+.phpunit.result.cache
+/phpunit.xml
+
+### Docker-related Ignored Files ###
+
+# Ignore Docker config files if any
+/docker-compose.override.yml
+
+# Docker log and build files
+**/docker-compose.yml
+/.docker/
+
+### Node/React Frontend Ignored Files ###
+
+# Node modules and build artifacts
+/node_modules/
+/build/
+/dist/
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+### IDE Files ###
 .idea/
+*.iml
+*.sublime-workspace
+*.sublime-project
+
+### General ###
 .DS_Store
-
-# Node modules (for frontend/React project)
-node_modules/
-
-# Coverage and build files
-coverage/
-dist/
-
-# Environment files
-.env
-.env.local
-.env.*.local
-
-# Logs
-logs/
-
-# Exclude the entire backend vendor directory
-backend/vendor/
-
-# Additional files generated in root-level Docker setup
-docker-compose.override.yml
-docker-compose.yml
+Thumbs.db
