@@ -6,6 +6,9 @@
 parameters:
 
 services:
+    App\Message\TestMessageHandler:
+        arguments:
+            $logger: '@monolog.logger.messenger'
     # default configuration for services in *this* file
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
